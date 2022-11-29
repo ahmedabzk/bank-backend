@@ -12,12 +12,14 @@ WHERE id = $1 LIMIT 1;
 
 -- name: ListEntries :many
 SELECT * FROM entries
-LIMIT $1
-OFFSET $2;
+where account_id = $1
+order by id
+LIMIT $2
+OFFSET $3;
 
 -- name: UpdateEntry :one
-UPDATE entries
-SET account_id = $1,
-amount = $2
-WHERE id = $1
-RETURNING *;
+-- UPDATE entries
+-- SET account_id = $1,
+-- amount = $2
+-- WHERE id = $1
+-- RETURNING *;
