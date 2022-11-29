@@ -1,1 +1,1 @@
-# bank-backend with golang and postgresql.
+# a simple bank backend with golang and postgresql.
